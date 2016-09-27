@@ -1,11 +1,11 @@
-def position_taken?(board, position)
-  if board[position] == " "
+def position_taken?(board, index)
+  if board[index] == " "
     return false
 
-  elsif board[position] == ""
+  elsif board[index] == ""
     return false
 
-  elsif board[position] == "X" || board[position] == "O"
+  elsif board[index] == "X" || board[index] == "O"
     return true
 
   else
@@ -13,8 +13,8 @@ def position_taken?(board, position)
   end
 end
 
-def valid_move?(board, position)
-  if board.empty? && !position_taken?(board, position.to_i-1.between?(1, 9))
+def valid_move?(board, index)
+  if index.to_i.between?(1, 9) && position_taken?(board, index.to_i-1) == false
     return true
 
   end
