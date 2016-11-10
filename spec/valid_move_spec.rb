@@ -8,12 +8,7 @@ describe './lib/valid_move.rb' do
     expect(valid_move?(board, index)).to be_truthy
   end
 
-  it 'returns nil or false for an occupied position' do
-    board = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
-    index = 4
 
-    expect(valid_move?(board, index)).to be_falsey
-  end
 
   it 'returns nil or false for a position that is not on the board' do
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
