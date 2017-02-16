@@ -1,4 +1,11 @@
-# code your #valid_move? method here
+def position_taken?(board, n)
+  if board[n] == "" || board[n] == " " || board[n] == nil
+    false
+  elsif board[n] == "X" || board[n] == "O"
+    true
+  end
+end
 
-
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def valid_move?(board, n)
+  return !position_taken?(board, n) && n <= 8 && n >= 0  
+end
