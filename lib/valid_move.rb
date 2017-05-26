@@ -1,4 +1,17 @@
-# code your #valid_move? method here
+def valid_move?(board, idx)
+  if position_taken?(board, idx)
+    return false
+  elsif position_taken?(board, idx) == false
+    return true if (0..8).include?(idx)
+  end
+end
 
-
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def position_taken?(board, idx)
+  if board[idx] == "X" || board[idx] == "O"
+    return true
+  elsif board[idx] == "" || " "
+    return false
+  elsif board[idx] == nil
+    return false
+  end
+end
