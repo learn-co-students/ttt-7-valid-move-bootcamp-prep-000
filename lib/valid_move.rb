@@ -1,4 +1,14 @@
-# code your #valid_move? method here
 
+def position_taken?(board, index_number)
+  !(board[index_number].nil? || board[index_number] == " ")
+end
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def valid_move?(board, input)
+  if input.between?(0, 8) && position_taken?(board, input)
+    false
+  elsif !(input.between?(0, 8))
+    false
+  else
+    true
+  end
+end
