@@ -26,4 +26,18 @@ describe './lib/valid_move.rb' do
 
     expect(valid_move?(board, index)).to be_falsey
   end
+
+  it 'returns nil or false for a position that just longer than the board' do
+    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    index = 9
+
+    expect(valid_move?(board, index)).to be_falsey
+  end
+
+  it 'returns nil or false for a position that is negative' do
+    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+    index = -1
+
+    expect(valid_move?(board, index)).to be_falsey
+  end
 end
