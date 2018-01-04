@@ -1,4 +1,18 @@
-# code your #valid_move? method here
+def position_taken?(board_arr, index)
 
+  return false if board_arr[index] == " " || board_arr[index] == ""
+  return false if board_arr[index] == nil
+  true
+end
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
+def valid_move?(board_arr, index)
+  if index.between?(0 , 8)
+    if position_taken?(board_arr, index)
+      false
+    else
+      true
+    end
+  else
+    false
+  end
+end
