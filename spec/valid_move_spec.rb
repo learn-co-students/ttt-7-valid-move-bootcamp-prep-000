@@ -1,4 +1,5 @@
 require_relative "../lib/valid_move.rb"
+require 'pry'
 
 describe './lib/valid_move.rb' do
   it 'returns true for a valid position on an empty board' do
@@ -23,7 +24,6 @@ describe './lib/valid_move.rb' do
   it 'returns nil or false for a position that is not on the board' do
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     index = 100
-
     expect(valid_move?(board, index)).to be_falsey
   end
 end
