@@ -15,9 +15,9 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  if(index < 0 || index > 9 )
+  if(index < 0 || index > 9 || index == nil)
     return FALSE
-  elsif(position_taken(board, index))
+  elsif(position_taken?(board, index))
     return FALSE
   else
     return TRUE
