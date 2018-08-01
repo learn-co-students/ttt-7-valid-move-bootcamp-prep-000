@@ -1,13 +1,5 @@
-def valid_move?(board, position)
-	spot = position.to_i - 1
-	if !position_taken?(board, spot) && spot.between?(0,8)
-		true
-
-	else
-		false
-
-	end
-
+def valid_move?(number_entered, board)
+  number_entered.between?(0, 8) && !(position_taken?(board, number_entered))
 end
 
 
