@@ -1,5 +1,5 @@
 def valid_move?(board, indx)
-  if indx < 0 || indx > 8 || position_taken?(board, indx)
+  if !indx.between?(0,8) || position_taken?(board, indx)
     return false
   else
     return true
