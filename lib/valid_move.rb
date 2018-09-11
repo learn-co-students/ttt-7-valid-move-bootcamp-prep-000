@@ -9,7 +9,7 @@ def position_taken?(board, index)
 end
 
 def valid_move?(board, index)
-  if index < 0 || 9 <= index
+  if not index.between?(0, board.length-1)
     return false
   end
   not position_taken?(board, index)
