@@ -1,7 +1,6 @@
 def valid_move?(array, index)
 
-if array[index] == " "
-  return true
+
   
 end
 end
