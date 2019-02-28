@@ -1,4 +1,4 @@
-# Validating Tic-tac-toe Input
+  # Validating Tic-tac-toe Input
 
 ## Objectives
 1. Use either `if` statements or boolean expressions to control the return value of a method.
