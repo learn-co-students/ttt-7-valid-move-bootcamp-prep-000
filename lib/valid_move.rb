@@ -1,9 +1,10 @@
 # code your #valid_move? method here
+require 'pry'
 def valid_move?(board, index)
-  spot = index.to_i - 1
-  if !(position_taken?(board, spot) && spot.between?(0,8)
+  if (!(position_taken?(board, index)) && index.between?(0,8))
     return true
-  else return false
+  else
+    return false
   end
 end
 
@@ -11,7 +12,9 @@ end
 def position_taken? (board, index)
   if (board[index] == " " || board[index] == "" || board[index] == nil)
     return false
-  elsif (board[index] == "X" || board[index] == "O")
+  else
     return true
   end
 end
+
+#elsif (board[index] == "X" || board[index] == "O")
