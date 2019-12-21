@@ -17,10 +17,10 @@ end
 
 def position_taken?(board, index)
 
-  if ((board[index] == " " || board[index] == "") && valid_move)
+  if ((board[index] == " " || board[index] == "") && valid_move?)
     return FALSE
   
-  elsif (board[index] == nil && valid_move)
+  elsif (board[index] == nil && valid_move?)
     return FALSE
   
   else
