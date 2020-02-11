@@ -11,3 +11,5 @@ def position_taken?
   board[index] != " "
   
 end
+  
+  # looked at solution
