@@ -1,4 +1,6 @@
 # code your #valid_move? method here
+#board[index] is the element in position index on the board
+#the index is just index
 
 
 
