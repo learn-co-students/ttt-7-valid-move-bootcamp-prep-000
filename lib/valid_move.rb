@@ -20,7 +20,3 @@ def position_taken?(board, index)
     false
   end
 end
-
-
-#valid_move?(board, index)
-#position.to_i.between?(1,9) && position_taken?
