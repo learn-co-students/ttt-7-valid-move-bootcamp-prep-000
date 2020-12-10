@@ -1,26 +1,26 @@
-# code your #valid_move? method here
-
-
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 require "pry"
 
+# code your #valid_move? method here
+
 def valid_move?(board, index)
+  #binding.pry
+  if index.between?(0,8) && !position_taken?(board, index)
+    true
+  end
+end
 
-  def position_taken?(board, index)
+# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 
- # if (board[index] == "X" || board[index] == "O")
-    #true
-if (board[index].to_i.between?(1,9) && position_taken?)
-  false
-  
-  else board[index] == nil
+
+def position_taken?(board, index)
+  if (board[index] == "X" || board[index] == "O")
+    true
+    
+  else 
     false
   end
-
-  end
-  
 end
 
 
-
+#valid_move?(board, index)
 #position.to_i.between?(1,9) && position_taken?
